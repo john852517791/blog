@@ -11,19 +11,23 @@
 		<!-- 导航 -->
 		<!-- inverted为反色设置 -->
 		<nav class="ui inverted attached segment m-padded-tb-mini">
-			<div class="ui inverted secondary menu">
+			<div class="ui inverted secondary stackable menu">
 				<h2 class="ui teal header item">BLOG</h2>
-				<a href="#" class="item"><i class="home icon"></i> 首页</a>
-				<a href="#" class="item"><i class="idea icon"></i>分类</a>
-				<a href="#" class="item"><i class="tags icon"></i>标签</a>
-				<a href="#" class="item"><i class="info icon"></i>关于我</a>
-				<div class="right item">
+				<a href="#" class="m-button item m-mobile-hide"><i class="home icon"></i> 首页</a>
+				<a href="#" class="m-button item m-mobile-hide"><i class="idea icon"></i>分类</a>
+				<a href="#" class="m-button item m-mobile-hide"><i class="tags icon"></i>标签</a>
+				<a href="#" class="m-button item m-mobile-hide"><i class="clone icon"></i>归档</a>
+				<a href="#" class="m-button item m-mobile-hide"><i class="info icon"></i>关于我</a>
+				<div class="m-button right item  m-mobile-hide">
 					<div class="ui icon inverted transparent input">
 						<input type="text" placeholder="searching..." />
 						<i class="search link icon"></i>
 					</div>
 				</div>
 			</div>
+			<a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+				<i class="sidebar icon"></i>
+			</a>
 		</nav>
 		<!-- 中间内容 -->
 		
@@ -31,7 +35,8 @@
 		<nav>
 			<div class="m-padded-tb-big m-container">
 				<div class="ui container">
-					<div class="ui grid">
+					<div class="ui stackable grid">
+						<!-- 左半区 -->
 						<div class="eleven wide column">
 							<div class="ui top attached segment">
 								<!-- 分两个区 -->
@@ -48,7 +53,7 @@
 							
 							<div class="ui attached segment">
 								<div class="ui padded vertical segment">
-									<div class="ui grid">
+									<div class="ui  mobile reversed stackable grid">
 										<div class="eleven wide column">
 											<h3 class="ui header">这是个标题</h3>
 											<p class="m-text">内容wodohwqhdwquhequwohduqwiohduqwi。。。</p>
@@ -86,12 +91,106 @@
 										<a href="#" class="ui mini teal basic button">上一页</a>
 									</div>
 									<div class="right aligned column">
-										<a href="#" class="ui mini teal basic button">下一页</a>								</div>
+										<a href="#" class="ui mini teal basic button">下一页</a>								
+									</div>
 								</div>
 							</div>
 						</div>
+						<!-- 右半区 -->
 						<div class="five wide column">
-							<div class="ui segment"></div>
+							<!-- 分类一组 -->
+							<div class="ui segments">
+								<!-- 第一个segment -->
+								<div class="ui secondary segment">
+									<div class="ui two column grid">
+										<div class="column">
+											<i class="idea icon"></i>分类
+										</div>
+										<div class="right aligned column">
+											<a href="" target="_blank">more<i class="angle double right icon"></i></a>
+										</div>
+									</div>
+								</div>
+								<!-- 第二个segment -->
+								<div class="ui teal segment">
+									<div class="ui fluid vertical menu">
+										<a href="#" class="item">
+											aaa
+											<div class="ui teal basic left pointing label">13</div>
+										</a>
+									</div>
+									<div class="ui fluid vertical menu">
+										<a href="#" class="item">
+											aaa
+											<div class="ui teal basic left pointing label">13</div>
+										</a>
+									</div>
+									<div class="ui fluid vertical menu">
+										<a href="#" class="item">
+											aaa
+											<div class="ui teal basic left pointing label">13</div>
+										</a>
+									</div>
+									<div class="ui fluid vertical menu">
+										<a href="#" class="item">
+											aaa
+											<div class="ui teal basic left pointing label">13</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 标签一组 -->
+							<div class="ui segments m-margin-top">
+								<!-- 第一个segment -->
+								<div class="ui secondary segment">
+									<div class="ui two column grid">
+										<div class="column">
+											<i class="tags icon"></i>标签
+										</div>
+										<div class="right aligned column">
+											<a href="" target="_blank">more<i class="angle double right icon"></i></a>
+										</div>
+									</div>
+								</div>
+								<!-- 第二个segment -->
+								<div class="ui teal segment">
+									<a href="#" class="ui teal basic left pointing label m-margin-tb-tiny" target="_blank">
+										方法论<div class="detail">22</div>
+									</a>
+									<a href="#" class="ui teal basic left pointing label m-margin-tb-tiny" target="_blank">
+										方法论<div class="detail">22</div>
+									</a>
+									<a href="#" class="ui teal basic left pointing label m-margin-tb-tiny" target="_blank">
+										方法论<div class="detail">22</div>
+									</a>
+									<a href="#" class="ui teal basic left pointing label m-margin-tb-tiny" target="_blank">
+										方法论<div class="detail">22</div>
+									</a>
+								</div>
+							</div>
+							<!-- 标签一组 -->
+							<div class="ui segments m-margin-top">
+								<!-- 第一个segment -->
+								<div class="ui secondary segment">
+									<div class="column">
+										<i class="star icon"></i>最新推荐
+									</div>
+								</div>
+								<!-- 第二个segment -->
+								<div class="ui segment">
+									<a href="#" target="_blank">story</a>
+								</div>
+								<div class="ui segment">
+									<a href="#" target="_blank">story</a>
+								</div>
+								<div class="ui segment">
+									<a href="#" target="_blank">story</a>
+								</div>
+							</div>
+							<h4 class="ui horizontal divider header m-margin-top">打钱</h4>
+							<div class="ui centered card m-margin-top" style="width: 12em;">
+								<img src="./static/image/csust.jpg" alt="" class="ui round image" />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -99,9 +198,9 @@
 		</nav>
 		
 		<!-- 底部footer -->
-		<nav class="ui inverted vertical segment m-padded-tb-massive">
+		<nav class="ui inverted vertical segment m-padded-tb-big">
 			<div class="ui center aligned container">
-				<div class="ui inverted divided grid">
+				<div class="ui inverted divided stackable grid">
 					<!-- 块1：图片 -->
 					<div class="three wide column">
 						<div class="ui inverted link list">
@@ -142,7 +241,12 @@
 		
 		
 		
-		<link  />
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>	</body>
+		<script>
+			$('.menu.toggle').click(function(){
+				$('.m-button').toggleClass('m-mobile-hide');
+			});
+		</script>
 </html>

@@ -1,3 +1,9 @@
+body{
+	background-image: url(../image/watercolor.png);
+}
+
+
+
 .m-padded-tb-massive{
 	padding-top:5em !important;
 	padding-bottom:5em !important;
@@ -29,4 +35,33 @@
 	letter-spacing: 1px !important;
 	line-height: 1.8;
 	opacity: 0.7;
+}
+.m-margin-tb-tiny{
+	margin-top: 0.3em !important;
+	margin-bottom: 0.3em !important;
+}
+
+.m-margin-top{
+	margin-top: 2em !important;
+}
+
+
+
+.m-right-top{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.m-mobile-show{
+		display: none !important;
+	}
+@media screen and (max-width:768px) {
+	.m-mobile-hide{
+		display: none !important;
+	}
+	
+	.m-mobile-show{
+		display: block !important;
+	}
 }
