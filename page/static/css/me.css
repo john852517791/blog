@@ -2,8 +2,15 @@ body{
 	background-image: url(../image/watercolor.png);
 }
 
-
-
+.m-padded-text-left{
+	padding-left: 3em !important;
+	
+}
+.m-padded-text{
+	padding-left: 4em !important;
+	padding-right: 4em !important;
+	
+}
 .m-padded-tb-massive{
 	padding-top:5em !important;
 	padding-bottom:5em !important;
@@ -28,6 +35,10 @@ body{
 
 .m-container{
 	max-width: 72em !important;
+	margin: auto !important;
+}
+.m-container-small{
+	max-width: 62em !important;
 	margin: auto !important;
 }
 .m-text{
