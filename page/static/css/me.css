@@ -1,5 +1,6 @@
 body{
 	background-image: url(../image/watercolor.png);
+	background-repeat: repeat;
 }
 
 .m-padded-text-left{
