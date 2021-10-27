@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+logging:
+  level:
+    root: info
+    com.wzyblog: debug
+  file:
+    name: log/blog-dev.log
+
+
+server:
+  port: 8080
