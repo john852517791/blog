@@ -13,20 +13,16 @@
 		<!-- inverted为反色设置 -->
 		<nav class="ui inverted attached segment m-padded-tb-mini">
 			<div class="ui inverted secondary stackable menu">
-				<h2 class="ui teal header item">管理后台</h2>
-				<a href="#" class="m-button item m-mobile-hide"><i class="home icon"></i>博客</a>
+				<h2 class="ui teal header item">BLOG</h2>
+				<a href="#" class="m-button item m-mobile-hide"><i class="home icon"></i> 首页</a>
 				<a href="#" class="m-button item m-mobile-hide"><i class="idea icon"></i>分类</a>
 				<a href="#" class="m-button item m-mobile-hide"><i class="tags icon"></i>标签</a>
-				<div class="right m-button m-mobile-hide menu">
-					<div class="ui dropdown item">
-						<div class="text">
-							<img src="https://picsum.photos/seed/picsum/100/100" alt="" class="ui avatar image">
-							汪智勇
-						</div>
-						<i class="dropdown icon"></i>
-						 <div class="menu">
-							 <a href="#" class="item">注销</a>
-						 </div>
+				<a href="#" class="m-button item m-mobile-hide"><i class="clone icon"></i>归档</a>
+				<a href="#" class="m-button item m-mobile-hide"><i class="info icon"></i>关于我</a>
+				<div class="m-button right item  m-mobile-hide">
+					<div class="ui icon inverted transparent input">
+						<input type="text" placeholder="searching..." />
+						<i class="search link icon"></i>
 					</div>
 				</div>
 			</div>
@@ -35,87 +31,73 @@
 			</a>
 		</nav>
 		
-		<div class="ui menu">
-			<div class="ui container">
-				<div class="right menu">
-					<a href="" class="item">发布</a>
-					<a href="" class="teal active item">列表</a>				
-				</div>
-			</div>
-		</div>
 		
 		<!-- 内容 -->
 		<div class="m-container-small m-padded-tb-big">
 			<div class="ui container">
-				<form action="" class="ui segment form" method="post">
-					<div class="inline fields">
-						<div class="field">
-							<input type="text" name="title" placeholder="标题">
+				<div class="ui top attached segment">
+					<!-- 分两个区 -->
+					<div class="ui middle two column grid">
+						<div class="column">
+							<h3 class="ui teal header">分类</h3>
 						</div>
-						<div class="field">
-							<div class="ui selection dropdown">
-								<input type="hidden" name="type">
-								<i class="dropdown icon"></i>
-								<div class="default text">分类</div>
-								<div class="menu">
-									<div class="item" data-value="1">错误</div>
-									<div class="item" data-value="1">正确</div>
-								</div>
-							</div>
-						</div>
-						<div class="field">
-							<div class="ui checkbox">
-								<input type="checkbox" name="recommend" id="recommend">
-								<label for="recommend">推荐</label>
-							</div>
-						</div>
-						<div class="field">
-							<button class="ui mini red basic button">
-								<i class="search icon"></i>
-								搜索
-							</button>
+						<div class="right aligned column">
+							共<h2 class="ui orange header m-inline-block">X</h2>个
 						</div>
 					</div>
-				</form>
+				</div>
 				
-				<table class="ui celled table">
-					<thead>
-						<tr>
-							<th></th>
-							<th>标题</th>
-							<th>类型</th>
-							<th>推荐</th>
-							<th>更新时间</th>
-							<th>操作</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th>1</th>
-							<th>zzz</th>
-							<th>aaa</th>
-							<th>vvv</th>
-							<th>1212121</th>
-							<th>
-								<a href="" class="ui mini teal button">编辑</a>
-								<a href="" class="ui mini orange button">删除</a>
-							</th>
-						</tr>
-					</tbody>
-					<tfoot>
-						<tr>
-							<th colspan="6">
-								<div class="ui mini  pagination menu">
-									<a class="item">下一页</a>
-									<a class="item">下一页</a>
+				<div class="ui attached segment ">
+					<div class="ui labeled button">
+						<a href="#" class="ui basic teal button">思想与感悟</a>
+						<div class="ui basic teal left pointing label">3123</div>
+					</div>
+					<div class="ui labeled button">
+						<a href="#" class="ui basic  button">思想与感悟</a>
+						<div class="ui basic  left pointing label">3123</div>
+					</div>
+				</div>
+				<div class="ui top  red segment">
+					<div class="ui padded vertical segment">
+						<div class="ui mobile reversed stackable grid">
+							<div class="eleven wide column">
+								<h3 class="ui header">这是个标题</h3>
+								<p class="m-text">内容wodohwqhdwquhequwohduqwiohduqwi。。。</p>
+								<div class="ui mini horizontal link list">
+									<div class="item">
+										<img src="https://picsum.photos/seed/picsum/100/100" class="ui avatar image" alt="" />
+										<div class="content"><a href="#" class="header">wzy</a></div>
+									</div>
+									<div class="item">
+										<i class="calendar icon"></i>2021-10-2
+									</div>
+									<div class="item">
+										<i class=" eye icon"></i>2343
+									</div>
 								</div>
-								<a href="" class="ui mini right floated pink basic button">新增</a>
-							</th>
-						</tr>
-					</tfoot>
-				</table>
+							</div>
+							<div class="five wide column">
+								<a href="#" target="_blank" style="width: 800px;height: 450px;">
+									<img src="../static/image/beauty.jpg" class="ui rounded image" alt=""/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 				
-			</div>	
+				<div class="ui bottom attached segment">
+					<!-- 分两个区 -->
+					<div class="ui middle two column grid">
+						<div class="column">
+							<a href="#" class="ui mini teal basic button">上一页</a>
+						</div>
+						<div class="right aligned column">
+							<a href="#" class="ui mini teal basic button">下一页</a>								
+						</div>
+					</div>
+				</div>
+				
+			</div>
 		</div>
 		
 		
@@ -169,10 +151,6 @@
 				$('.menu.toggle').click(function(){
 					$('.m-button').toggleClass('m-mobile-hide');
 				});
-				$('.ui.dropdown').dropdown({
-					on:'hover'
-				});
-				
 			</script>
 			</body>
 	</html>

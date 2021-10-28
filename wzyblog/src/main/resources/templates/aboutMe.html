@@ -4,7 +4,7 @@
 		
 		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-		<link rel="stylesheet" href="./static/css/me.css" />
+		<link rel="stylesheet" href="../static/css/me.css" />
 		<title></title>
 	</head>
 	<body>
@@ -35,69 +35,37 @@
 		<!-- 内容 -->
 		<div class="m-container-small m-padded-tb-big">
 			<div class="ui container">
-				<div class="ui top attached segment">
-					<!-- 分两个区 -->
-					<div class="ui middle two column grid">
-						<div class="column">
-							<h3 class="ui teal header">分类</h3>
+				<div class="ui grid">
+					<div class="eleven wide column">
+						<img src="../static/image/beauty.jpg" alt="" class="ui rounded image">
+					</div>
+					<div class="five wide column">
+						<div class="ui top attached segment">
+							<div class="ui header">关于我</div>
 						</div>
-						<div class="right aligned column">
-							共<h2 class="ui orange header m-inline-block">X</h2>个
+						<div class="ui attached segment">
+							<p>wzyaljx</p>
+							<p>nowitsmzy</p>
 						</div>
-					</div>
-				</div>
-				
-				<div class="ui attached segment ">
-					<div class="ui labeled button">
-						<a href="#" class="ui basic teal button">思想与感悟</a>
-						<div class="ui basic teal left pointing label">3123</div>
-					</div>
-					<div class="ui labeled button">
-						<a href="#" class="ui basic  button">思想与感悟</a>
-						<div class="ui basic  left pointing label">3123</div>
-					</div>
-				</div>
-				<div class="ui top  red segment">
-					<div class="ui padded vertical segment">
-						<div class="ui mobile reversed stackable grid">
-							<div class="eleven wide column">
-								<h3 class="ui header">这是个标题</h3>
-								<p class="m-text">内容wodohwqhdwquhequwohduqwiohduqwi。。。</p>
-								<div class="ui mini horizontal link list">
-									<div class="item">
-										<img src="https://picsum.photos/seed/picsum/100/100" class="ui avatar image" alt="" />
-										<div class="content"><a href="#" class="header">wzy</a></div>
-									</div>
-									<div class="item">
-										<i class="calendar icon"></i>2021-10-2
-									</div>
-									<div class="item">
-										<i class=" eye icon"></i>2343
-									</div>
-								</div>
-							</div>
-							<div class="five wide column">
-								<a href="#" target="_blank" style="width: 800px;height: 450px;">
-									<img src="./static/image/beauty.jpg" class="ui rounded image" alt=""/>
-								</a>
-							</div>
+						<div class="ui bottom attached segment">
+							<a href="" class="ui circular icon button">
+								<i class="github icon"></i>
+							</a>
+							<a href="" class="ui wechat circular icon button">
+								<i class="wechat icon"></i>
+							</a>
+							<a href="#" class="ui qq circular icon button " data-content="852517791">
+								<i class="qq icon"></i>
+							</a>
+						</div>
+						
+						<div class="ui wechat-qr flowing popup transition hidden">
+							<img src="../static/image/watercolor.png" alt="" class="ui rounded image" style="width: 100px;">
 						</div>
 					</div>
 				</div>
-				
-				<div class="ui bottom attached segment">
-					<!-- 分两个区 -->
-					<div class="ui middle two column grid">
-						<div class="column">
-							<a href="#" class="ui mini teal basic button">上一页</a>
-						</div>
-						<div class="right aligned column">
-							<a href="#" class="ui mini teal basic button">下一页</a>								
-						</div>
-					</div>
-				</div>
-				
 			</div>
+			
 		</div>
 		
 		
@@ -109,7 +77,7 @@
 					<div class="three wide column">
 						<div class="ui inverted link list">
 							<div class="item">
-								<img src="./static/image/csust.jpg" class="ui rounded image" style="width: 110px;" alt=""/>
+								<img src="../static/image/csust.jpg" class="ui rounded image" style="width: 110px;" alt=""/>
 							</div>
 						</div>
 					</div>
@@ -151,6 +119,12 @@
 				$('.menu.toggle').click(function(){
 					$('.m-button').toggleClass('m-mobile-hide');
 				});
+				$('.wechat').popup({
+					popup : $('.wechat-qr'),
+					// position:' center'
+				});
+				$('.qq').popup();
+				
 			</script>
 			</body>
 	</html>
