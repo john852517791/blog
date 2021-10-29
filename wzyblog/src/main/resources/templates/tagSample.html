@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="">
 	<head>
 		
 		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
@@ -11,24 +11,8 @@
 		
 		<!-- 导航 -->
 		<!-- inverted为反色设置 -->
-		<nav class="ui inverted attached segment m-padded-tb-mini">
-			<div class="ui inverted secondary stackable menu">
-				<h2 class="ui teal header item">BLOG</h2>
-				<a href="#" class="m-button item m-mobile-hide"><i class="home icon"></i> 首页</a>
-				<a href="#" class="m-button item m-mobile-hide"><i class="idea icon"></i>分类</a>
-				<a href="#" class="m-button item m-mobile-hide"><i class="tags icon"></i>标签</a>
-				<a href="#" class="m-button item m-mobile-hide"><i class="clone icon"></i>归档</a>
-				<a href="#" class="m-button item m-mobile-hide"><i class="info icon"></i>关于我</a>
-				<div class="m-button right item  m-mobile-hide">
-					<div class="ui icon inverted transparent input">
-						<input type="text" placeholder="searching..." />
-						<i class="search link icon"></i>
-					</div>
-				</div>
-			</div>
-			<a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
-				<i class="sidebar icon"></i>
-			</a>
+		<nav th:replace="_fragments :: menu(1)"  class="ui inverted attached segment m-padded-tb-mini">
+
 		</nav>
 		
 		
@@ -100,45 +84,8 @@
 		
 		
 		<!-- 底部footer -->
-		<footer class="ui inverted vertical segment m-padded-tb-big">
-			<div class="ui center aligned container">
-				<div class="ui inverted divided stackable grid">
-					<!-- 块1：图片 -->
-					<div class="three wide column">
-						<div class="ui inverted link list">
-							<div class="item">
-								<img src="../static/image/csust.jpg" class="ui rounded image" style="width: 110px;" alt=""/>
-							</div>
-						</div>
-					</div>
-					<!-- 块2：最新博客链接 -->
-					<div class="three wide column">
-						<!-- 标题 -->
-						<h4 class="ui inverted header">最新博客</h4>
-						<!-- 链接 -->
-						<div class="ui inverted link list">
-							<a href="#" class="item">11111</a>
-							<a href="#" class="item">11111</a>
-							<a href="#" class="item">11111</a>
-						</div>
-					</div>
-					<div class="three wide column">
-						<!-- 标题 -->
-						<h4 class="ui inverted header">联系我</h4>
-						<!-- 链接 -->
-						<div class="ui inverted link  list">
-							<a href="#" class="item">QQ：852517791</a>
-							<a href="#" class="item">邮箱：852517791@qq.com</a>
-						</div>
-					</div>
-					<div class="seven wide column">
-						<h4 class="ui inverted header">联系我</h4>
-						<p>wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwzzzzzzzzzzzzzzzzz</p>
-					</div>
-				</div>
-				<div class="ui inverted section divider"></div>
-				<p class="m-text-opacity">wzyaljx</p>
-			</div>
+		<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-big">
+
 		</footer>
 		
 	
