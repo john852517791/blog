@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="">
 	<head>
 		
 		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
@@ -11,7 +11,7 @@
 		
 		<!-- 导航 -->
 		<!-- inverted为反色设置 -->
-		<nav class="ui inverted attached segment m-padded-tb-mini">
+		<nav   th:replace="manage/_common :: menu(1)"   class="ui inverted attached segment m-padded-tb-mini">
 			<div class="ui inverted secondary stackable menu">
 				<h2 class="ui teal header item">管理后台</h2>
 				<a href="#" class="m-button item m-mobile-hide"><i class="home icon"></i>博客</a>
@@ -35,11 +35,11 @@
 			</a>
 		</nav>
 		
-		<div class="ui menu">
+		<div  th:replace="manage/_common :: list(2)" class="ui menu">
 			<div class="ui container">
 				<div class="right menu">
 					<a href="" class="item">发布</a>
-					<a href="" class="teal active item">列表</a>				
+					<a href="" class="item">列表</a>
 				</div>
 			</div>
 		</div>
@@ -120,7 +120,7 @@
 		
 		
 		<!-- 底部footer -->
-		<footer class="ui inverted vertical segment m-padded-tb-big">
+		<footer th:replace="manage/_common :: footer"  class="ui inverted vertical segment m-padded-tb-big">
 			<div class="ui center aligned container">
 				<div class="ui inverted divided stackable grid">
 					<!-- 块1：图片 -->
