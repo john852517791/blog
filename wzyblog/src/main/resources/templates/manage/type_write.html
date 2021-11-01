@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="">
 	<head>
-		
 		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 		<link rel="stylesheet" href="../../static/css/me.css" />
-		<title></title>
+		<link rel="stylesheet" href="../../static/lib/markdown/css/editormd.min.css" />
+
+		<title>分类新增</title>
 	</head>
 	<body>
 		
 		<!-- 导航 -->
 		<!-- inverted为反色设置 -->
-		<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini">
+		<nav  th:replace="manage/_common :: menu(2)"   class="ui inverted attached segment m-padded-tb-mini">
 			<div class="ui inverted secondary stackable menu">
 				<h2 class="ui teal header item">管理后台</h2>
-				<a href="#" th:href="@{/admin/blogs}" class="m-button item m-mobile-hide" th:classappend="${n==1} ? ' active '"><i class="home icon"></i>博客</a>
-				<a href="#" th:href="@{/admin/types}" class="m-button item m-mobile-hide" th:classappend="${n==2} ? ' active '"><i class="idea icon"></i>分类</a>
-				<a href="#" th:href="@{/admin/tags}" class="m-button item m-mobile-hide" th:classappend="${n==3} ? ' active '"><i class="tags icon"></i>标签</a>
+				<a href="#" class="m-button item m-mobile-hide"><i class="home icon"></i>博客</a>
+				<a href="#" class="m-button item m-mobile-hide"><i class="idea icon"></i>分类</a>
+				<a href="#" class="m-button item m-mobile-hide"><i class="tags icon"></i>标签</a>
 				<div class="right m-button m-mobile-hide menu">
 					<div class="ui dropdown item">
 						<div class="text">
@@ -25,7 +26,7 @@
 						</div>
 						<i class="dropdown icon"></i>
 						 <div class="menu">
-							 <a href="#" th:href="@{/admin/logout}" class="item">注销</a>
+							 <a href="#" class="item">注销</a>
 						 </div>
 					</div>
 				</div>
@@ -35,19 +36,47 @@
 			</a>
 		</nav>
 		
-		<div  th:fragment="list(n)"  class="ui menu">
+		<div th:replace="manage/_common :: list(1)"   class="ui menu">
 			<div class="ui container">
 				<div class="right menu">
-					<a href="" class="item" th:classappend="${n==1} ? 'teal active '">发布</a>
-					<a href="" class="item" th:classappend="${n==2} ? 'teal active '">列表</a>
+					<a href="" class="item">发布</a>
+					<a href="" class="item">列表</a>				
 				</div>
 			</div>
 		</div>
 		
+		<!-- 内容 -->
+		<div class="m-container-small m-padded-tb-big">
+			<div class="ui container">
+				<form action="" class="ui form">
 
+					
+
+					<div class="field">
+						<div class="ui left labeled input">
+							<label for="" class="ui teal basic label">名称</label>
+							<input type="text" name="name" placeholder="分类名称">
+						</div>
+					</div>
+
+
+					<div class="ui error message"></div>
+					
+					<div class="ui right aligned container">
+						<button class="ui button" type="button" onclick="window.history.go(-1)">返回</button>
+						<button class="ui blue button" type="submit">提交</button>
+					</div>
+					
+				</form>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+		
 		
 		<!-- 底部footer -->
-		<footer th:fragment="footer"  class="ui inverted vertical segment m-padded-tb-big">
+		<footer th:replace="manage/_common :: footer"  class="ui inverted vertical segment m-padded-tb-big">
 			<div class="ui center aligned container">
 				<div class="ui inverted divided stackable grid">
 					<!-- 块1：图片 -->
@@ -91,14 +120,50 @@
 	
 	
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>	
+			<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+			<script src="../../static/lib/markdown/editormd.min.js"></script>
+
 			<script>
 				$('.menu.toggle').click(function(){
 					$('.m-button').toggleClass('m-mobile-hide');
 				});
+				
 				$('.ui.dropdown').dropdown({
 					on:'hover'
 				});
+				
+				$('.ui.form').form({
+					fields : {
+						title : {
+							identifier : 'name',
+							rules :[{
+								type : 'empty',
+								prompt : '错误：请输入分类名称'
+							}]
+						}
+					}
+				});
+				
+				var contentEditor;
+				$(function() {
+				    contentEditor = editormd("md-content", {
+				        width   : "100%",
+				        height  : 640,
+				        syncScrolling : "single",
+				        path    : "../../static/lib/markdown/lib/"
+				    });
+				    
+				    /*
+				    // or
+				    testEditor = editormd({
+				        id      : "test-editormd",
+				        width   : "90%",
+				        height  : 640,
+				        path    : "../lib/"
+				    });
+				    */
+				});
+				            
 				
 			</script>
 			</body>
