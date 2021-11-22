@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      database: test
+      host: localhost
+      port: 27017
+# 应用名称
+#spring.application.name=demo
+
+

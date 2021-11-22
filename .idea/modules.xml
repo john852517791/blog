@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/blog.iml" filepath="$PROJECT_DIR$/blog.iml" />
       <module fileurl="file://$PROJECT_DIR$/wzyblog/wzyblog.iml" filepath="$PROJECT_DIR$/wzyblog/wzyblog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wzymongo/wzymongo.iml" filepath="$PROJECT_DIR$/wzymongo/wzymongo.iml" />
     </modules>
   </component>
 </project>

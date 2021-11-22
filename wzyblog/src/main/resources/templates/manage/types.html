@@ -61,17 +61,17 @@
 							<th th:text="${typeStat.count}"></th>
 							<th th:text="${type.name}"></th>
 							<th>
-								<a href="" th:href="@{/admin/types/{id}/input(id=${type,id})}" class="ui mini teal button">编辑</a>
-								<a href="" th:href="@{/admin/types/{id}/delete(id=${type,id})}" class="ui mini orange button">删除</a>
+								<a href="" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini teal button">编辑</a>
+								<a href="" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui mini orange button">删除</a>
 							</th>
 						</tr>
 					</tbody>
 					<tfoot>
 						<tr>
-							<th colspan="6">
-								<div class="ui mini  pagination menu">
-									<a th:href="@{/admin/types(page=${page.number}-1)}" class="item">上一页</a>
-									<a th:href="@{/admin/types(page=${page.number}+1)}" class="item">下一页</a>
+							<th colspan="6" >
+								<div class="ui mini  pagination menu" th:if="${page.totalPages}>1">
+									<a th:href="@{/admin/types(page=${page.number}-1)}" th:unless="${page.first}" class="item">上一页</a>
+									<a th:href="@{/admin/types(page=${page.number}+1)}" th:unless="${page.last}" class="item">下一页</a>
 								</div>
 								<a href=""  th:href="@{/admin/types/input}" class="ui mini right floated pink basic button">新增</a>
 							</th>

@@ -9,6 +9,7 @@ import com.wzyblog.entity.Type;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import javax.naming.Name;
 import java.util.Optional;
 
 public interface TypeService {
@@ -23,5 +24,5 @@ public interface TypeService {
 //    查多条
     Type getType(Long id);
 //    查一条
-
+    Type getTypeByName(String name);
 }

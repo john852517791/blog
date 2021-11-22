@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/wzyblog/pom.xml" />
+        <option value="$PROJECT_DIR$/wzymongo/pom.xml" />
       </list>
     </option>
   </component>
